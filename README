@@ -1,0 +1,165 @@
+# Task Manager - Node.js HTTP API
+
+A simple Task Manager application built with native Node.js.
+
+This project was developed progressively from the Day 1 and Day 2 Task Manager. It now provides an HTTP API using Node.js's built-in `http` module without using Express or another web framework.
+
+The application supports creating, reading, and managing tasks while storing the task data in a JSON file.
+
+---
+
+## Features
+
+- Native Node.js HTTP server
+- Configurable server port
+- Default local port: `3000`
+- Small routing layer
+- JSON API responses
+- Task persistence using `task.json`
+- Async file operations using `async/await`
+- Get all tasks
+- Get a single task by ID
+- Create a new task
+- Task input validation
+- Proper HTTP status codes
+- Consistent JSON error responses
+- Malformed JSON handling
+- Invalid task input handling
+- Unknown route handling
+- Unsupported HTTP method handling
+- Unexpected server error handling
+- Health check endpoint
+
+---
+
+## Project Structure
+
+```text
+task-manager/
+│
+├── main.js
+├── server.js
+├── router.js
+├── request.js
+├── response.js
+├── storage.js
+├── task-manager.js
+├── task.json
+├── package.json
+└── README.md
+
+## Output 
+
+> task-manager@1.0.0 server
+> node server.js
+
+Server is running on http://localhost:3000
+ReferenceError: sendError is not defined
+    at router (C:\Users\Akbar Ali\OneDrive\Documents\task-manager\router.js:30:17)
+    at Server.<anonymous> (C:\Users\Akbar Ali\OneDrive\Documents\task-manager\server.js:7:5)
+    at Server.emit (node:events:509:28)
+    at parserOnIncoming (node:_http_server:1282:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:125:17)
+ReferenceError: sendError is not defined
+    at router (C:\Users\Akbar Ali\OneDrive\Documents\task-manager\router.js:74:13)
+    at Server.<anonymous> (C:\Users\Akbar Ali\OneDrive\Documents\task-manager\server.js:7:5)
+    at Server.emit (node:events:509:28)
+    at parserOnIncoming (node:_http_server:1282:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:125:17)
+ReferenceError: sendError is not defined
+    at router (C:\Users\Akbar Ali\OneDrive\Documents\task-manager\router.js:30:17)
+    at Server.<anonymous> (C:\Users\Akbar Ali\OneDrive\Documents\task-manager\server.js:7:5)
+    at Server.emit (node:events:509:28)
+    at parserOnIncoming (node:_http_server:1282:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:125:17)
+ReferenceError: sendError is not defined
+    at router (C:\Users\Akbar Ali\OneDrive\Documents\task-manager\router.js:74:13)
+    at Server.<anonymous> (C:\Users\Akbar Ali\OneDrive\Documents\task-manager\server.js:7:5)
+    at Server.emit (node:events:509:28)
+    at parserOnIncoming (node:_http_server:1282:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:125:17)
+(.venv) PS C:\Users\Akbar Ali\OneDrive\Documents\task-manager> ^C
+(.venv) PS C:\Users\Akbar Ali\OneDrive\Documents\task-manager> npm run server
+
+> task-manager@1.0.0 server
+> node server.js
+
+sendJson: function
+sendError: function
+Server is running on http://localhost:3000
+(.venv) PS C:\Users\Akbar Ali\OneDrive\Documents\task-manager> ^C
+(.venv) PS C:\Users\Akbar Ali\OneDrive\Documents\task-manager> npm run server
+
+> task-manager@1.0.0 server
+> node server.js
+
+sendJson: function
+sendError: function
+Server is running on http://localhost:3000
+(.venv) PS C:\Users\Akbar Ali\OneDrive\Documents\task-manager> ^C
+(.venv) PS C:\Users\Akbar Ali\OneDrive\Documents\task-manager> npm run server
+
+> task-manager@1.0.0 server
+> node server.js
+
+Server is running on http://localhost:3000
+tasks.json was read successfully.
+Data from file: [{
+        "id": 201,
+        "title": "learning managment",
+        "completed": false,
+        "priority": "high"
+    },
+    {
+        "id": 202,
+        "title": "anger managment issues",
+        "completed": true,
+        "priority": "medium"
+    },
+    {
+        "id": 204,
+        "title": "managment science",
+        "completed": true,
+        "priority": "low"
+    }
+]
+tasks.json was read successfully.
+Data from file: [{
+        "id": 201,
+        "title": "learning managment",
+        "completed": false,
+        "priority": "high"
+    },
+    {
+        "id": 202,
+        "title": "anger managment issues",
+        "completed": true,
+        "priority": "medium"
+    },
+    {
+        "id": 204,
+        "title": "managment science",
+        "completed": true,
+        "priority": "low"
+    }
+]
+tasks.json was read successfully.
+Data from file: [{
+        "id": 201,
+        "title": "learning managment",
+        "completed": false,
+        "priority": "high"
+    },
+    {
+        "id": 202,
+        "title": "anger managment issues",
+        "completed": true,
+        "priority": "medium"
+    },
+    {
+        "id": 204,
+        "title": "managment science",
+        "completed": true,
+        "priority": "low"
+    }
+]
